@@ -20,13 +20,13 @@ function App() {
   document.body.style.backgroundColor = backgroundColor;
 
   return (
-    <div className='container'>
+    <div className='container' data-testid="background" >
       <h1>Welcome, party people!</h1>
       <p>Click the button to toggle the theme</p>
 
-      <button onClick={toggleTheme}>Current theme: {theme}</button>
+      <button onClick={toggleTheme} data-testid="themeButton">Current theme: {theme}</button>
 
-      <button onClick={toggleHidden}>
+      <button onClick={toggleHidden} data-testid="hiddenContentButton">
         {showHidden ? 'Hide' : 'Show'} hidden content
       </button>
 
